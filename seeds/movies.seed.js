@@ -84,6 +84,14 @@ const movies = [
   // Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
   
   const mongoose = require('mongoose');
-  const Book = require('../models/Movie.model');
+const MovieModel = require('../models/Movie.model');
   
-  const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/lab-express-cinema';
+  const MONGO_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1/lab-express-cinema';
+mongoose.connect(MONGO_URI)
+  MovieModel.insertMany(movies)
+  .then((result)=>{
+    console.log(result)
+  })
+  .catch((error)=>{
+    console.log(error)
+  })

@@ -6,3 +6,32 @@ body {
 a {
   color: #00B7FF;
 }
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+ 
+
+}
+
+.movies li {
+  width: 300px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 200px;
+}
+
+.text {
+  width: 500px;
+}
